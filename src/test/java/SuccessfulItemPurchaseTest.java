@@ -1,7 +1,6 @@
 import Pages.*;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertTrue;
 
 public class SuccessfulItemPurchaseTest extends BaseTest{
@@ -20,7 +19,6 @@ public class SuccessfulItemPurchaseTest extends BaseTest{
     public void setUp() throws Exception {
         driver.get("https://www.saucedemo.com/");
         logInPage.logInWithValidData();
-
     }
 
 
@@ -37,8 +35,5 @@ public class SuccessfulItemPurchaseTest extends BaseTest{
         String expectedMessage = "Thank you for your order!";
         String actualMessage = driver.findElement(checkoutCompletePage.messageForSuccessfulPurchase).getText();
         assertTrue("Message is incorect",actualMessage.equals(expectedMessage));
-
-
-
     }
 }

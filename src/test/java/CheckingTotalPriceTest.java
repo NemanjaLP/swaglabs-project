@@ -1,7 +1,6 @@
 import Pages.*;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class CheckingTotalPriceTest extends BaseTest{
@@ -18,7 +17,6 @@ public class CheckingTotalPriceTest extends BaseTest{
     public void setUp() throws Exception {
         driver.get("https://www.saucedemo.com/");
         logInPage.logInWithValidData();
-
     }
 
     @Test
@@ -34,10 +32,5 @@ public class CheckingTotalPriceTest extends BaseTest{
         double taxPrice= (double) checkoutOverviewPage.taxPriceSample;
         double totalPrice=firstItemPrice+secondItemPrice+taxPrice;
         assertEquals(28.06,totalPrice,0.1);
-
-
-
     }
-
-
 }

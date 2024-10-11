@@ -1,19 +1,15 @@
 import Pages.LogInPage;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertTrue;
 
 public class LogInTests extends BaseTest{
-
-
     LogInPage loginpage = new LogInPage(driver);
 
 
     @Before
     public void setUp() throws Exception {
         driver.get("https://www.saucedemo.com/");
-
     }
 
 

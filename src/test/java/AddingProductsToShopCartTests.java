@@ -4,11 +4,9 @@ import Pages.ProductListPage;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
 import static org.junit.Assert.assertTrue;
 
 public class AddingProductsToShopCartTests extends BaseTest{
-
     ProductListPage productListPage = new ProductListPage(driver);
     LogInPage loginPage = new LogInPage(driver);
     CartPage cartPage = new CartPage(driver);

@@ -3,7 +3,6 @@ import Pages.LogInPage;
 import Pages.ProductListPage;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -11,7 +10,6 @@ public class RemoveProductsFromCartTest extends BaseTest {
 
     CartPage cartPage = new CartPage(driver);
     ProductListPage productListPage = new ProductListPage(driver);
-
     LogInPage logInPage = new LogInPage(driver);
 
 
@@ -35,12 +33,5 @@ public class RemoveProductsFromCartTest extends BaseTest {
         driver.findElement(cartPage.removeBackpackItem).click();
         assertTrue("Product is still there", ItemOne == expectedItemOne);
         assertFalse("Product is still there", ItemTwo != expectedItemTwo);
-
-
     }
-
-
-
-
-
 }

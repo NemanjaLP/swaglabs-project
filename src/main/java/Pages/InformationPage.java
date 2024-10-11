@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class InformationPage {
 
     public static WebDriver driver;
-
     public static By firstNameInputField = By.id("first-name");
     public static By lastNameInputField = By.id("last-name");
     public static By zipCodeInputField = By.id("postal-code");
@@ -20,7 +19,6 @@ public class InformationPage {
 
     public InformationPage(WebDriver driver){
         this.driver = driver;
-
     }
 
 
@@ -28,7 +26,6 @@ public class InformationPage {
         driver.findElement(firstNameInputField).sendKeys("Nemanja");
         driver.findElement(lastNameInputField).sendKeys("Lakic Pesic");
         driver.findElement(zipCodeInputField).sendKeys("11080");
-
     }
 
     public void clickOnContinueButton(){
