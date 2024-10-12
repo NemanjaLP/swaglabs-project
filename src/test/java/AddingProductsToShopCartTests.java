@@ -1,6 +1,7 @@
 import Pages.CartPage;
 import Pages.LogInPage;
 import Pages.ProductListPage;
+import jdk.jfr.Description;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -19,6 +20,7 @@ public class AddingProductsToShopCartTests extends BaseTest{
     }
 
     @Test
+    @Description("Testing if the items has been successfully added to the shopping cart")
     public void addingProductsToShopCart() {
 
         productListPage.addFleeceJacketItemToShopCart();

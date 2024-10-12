@@ -7,13 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
     public static WebDriver driver;
-    public static LogInPage logInPage = new LogInPage(driver);
+
 
     @BeforeClass
     public static void beforeClass() throws Exception {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        LogInPage logInPage = new LogInPage(driver);
     }
     @AfterClass
     public static void afterClass() throws Exception {

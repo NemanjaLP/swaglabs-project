@@ -1,4 +1,5 @@
 import Pages.*;
+import jdk.jfr.Description;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -20,7 +21,9 @@ public class CheckingTotalPriceTest extends BaseTest{
     }
 
     @Test
-    public void TotalPriceCheck() {
+    @Description("This test verifies that the total price displayed in the shopping cart is accurate after adding multiple items.")
+
+    public void totalPriceCheck() {
         productListPage.addBoltTShirtToShopCart();
         productListPage.addBikelightItemToShopCart();
         productListPage.goToShopCart();

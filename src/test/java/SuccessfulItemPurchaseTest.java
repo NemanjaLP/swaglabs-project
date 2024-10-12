@@ -1,4 +1,5 @@
 import Pages.*;
+import jdk.jfr.Description;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
@@ -23,6 +24,7 @@ public class SuccessfulItemPurchaseTest extends BaseTest{
 
 
     @Test
+    @Description("This test verifies that a user can successfully complete a purchase after adding items to the shopping cart.")
     public void successesfullPurchase() {
         productListPage.addBoltTShirtToShopCart();
         productListPage.addBikelightItemToShopCart();

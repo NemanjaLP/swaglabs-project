@@ -1,5 +1,6 @@
 import Pages.LogInPage;
 import Pages.ProductListPage;
+import jdk.jfr.Description;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -22,10 +23,11 @@ public class CheckingSocialMediaLinksTest extends BaseTest{
 
 
     @Test
+    @Description("Testing the footer Twitter link functionality")
     public void checkOfTwitterLink() throws InterruptedException {
 
 
-        driver.findElement(productListPage.TwitterIcon).click();
+        driver.findElement(productListPage.twitterIcon).click();
         Thread.sleep(2000);
         String mainWindowHandle = driver.getWindowHandle();
         ArrayList<String> tabHandles = new ArrayList<>(driver.getWindowHandles());
@@ -39,10 +41,11 @@ public class CheckingSocialMediaLinksTest extends BaseTest{
 
 
     @Test
+    @Description("Testing the footer Facebook link functionality")
     public void checkOfFacebookLink() throws InterruptedException {
 
 
-        driver.findElement(productListPage.FacebookIcon).click();
+        driver.findElement(productListPage.facebookIcon).click();
         Thread.sleep(2000);
         String mainWindowHandle = driver.getWindowHandle();
         ArrayList<String> tabHandles = new ArrayList<>(driver.getWindowHandles());
@@ -57,10 +60,10 @@ public class CheckingSocialMediaLinksTest extends BaseTest{
     }
 
     @Test
+    @Description("Testing the footer Linkedin link functionality")
     public void checkOfLinkedinLink() throws InterruptedException {
 
-
-        driver.findElement(productListPage.LinkedinIcon).click();
+        driver.findElement(productListPage.linkedinIcon).click();
         Thread.sleep(2000);
         String mainWindowHandle = driver.getWindowHandle();
         ArrayList<String> tabHandles = new ArrayList<>(driver.getWindowHandles());

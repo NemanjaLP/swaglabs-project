@@ -1,4 +1,5 @@
 import Pages.LogInPage;
+import jdk.jfr.Description;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
@@ -15,6 +16,7 @@ public class LogInTests extends BaseTest{
 
 
     @Test
+    @Description("This test verifies that a user can log in successfully with valid credentials.")
     public void logInWithValidData() {
         loginpage.enterUserNameText("standard_user");
         loginpage.enterPassword("secret_sauce");
@@ -27,6 +29,7 @@ public class LogInTests extends BaseTest{
     }
 
     @Test
+    @Description("This test verifies that logging in with an valid username and a invalid password results in the correct error message being displayed.")
     public void logInWithValidUsernameAndInvalidPassword() {
         loginpage.enterUserNameText("standard_user");
         loginpage.enterPassword("testing");
@@ -38,6 +41,7 @@ public class LogInTests extends BaseTest{
     }
 
     @Test
+    @Description("This test verifies that logging in with an invalid username and a valid password results in the correct error message being displayed.")
     public void logInWithInvalidUsernameAndValidPassword() {
         loginpage.enterUserNameText("tester");
         loginpage.enterPassword("secret_sauce");
@@ -48,6 +52,7 @@ public class LogInTests extends BaseTest{
     }
 
     @Test
+    @Description("This test evaluates the system's response when both the username and password are invalid. It checks that the appropriate error message is displayed")
     public void logInWithInvalidUsernameAndInvalidPassword() {
         loginpage.enterUserNameText("tester");
         loginpage.enterPassword("testing");
@@ -59,6 +64,7 @@ public class LogInTests extends BaseTest{
     }
 
     @Test
+    @Description("This test checks the application's behavior when the password input field is left empty and the login attempt is made. It asserts that the appropriate error message is displayed")
     public void logInWithValidUsernameAndEmptyPasswordInputField() {
         loginpage.enterUserNameText("standard_user");
         loginpage.clickONLogInButton();
@@ -70,6 +76,7 @@ public class LogInTests extends BaseTest{
 
 
     @Test
+    @Description("This test checks the application's behavior when the username input field is left empty and the login attempt is made. It asserts that the appropriate error message is displayed")
     public void logInWithValidPasswordAndEmptyUsernameInputField() {
         loginpage.enterPassword("secret_sauce");
         loginpage.clickONLogInButton();

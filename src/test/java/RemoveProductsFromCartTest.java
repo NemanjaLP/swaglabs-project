@@ -1,6 +1,7 @@
 import Pages.CartPage;
 import Pages.LogInPage;
 import Pages.ProductListPage;
+import jdk.jfr.Description;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertFalse;
@@ -24,6 +25,7 @@ public class RemoveProductsFromCartTest extends BaseTest {
 
 
     @Test
+    @Description("This test verifies that a user can successfully remove the items from the shopping cart.")
     public void removeItems() {
         boolean ItemOne = cartPage.SauceLabsFleeceJacketItem();
         boolean expectedItemOne = false;

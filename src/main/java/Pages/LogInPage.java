@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class LogInPage {
 
-    public static WebDriver driver;
+    public WebDriver driver;
     public static By userNameField = By.cssSelector("input[placeholder='Username']");
     public static By passwordField = By.id("password");
     public static By logInButton = By.xpath("//input[@type='submit']");

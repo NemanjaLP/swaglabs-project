@@ -21,12 +21,12 @@ public class CartPage {
     public static By priceForBoltTshirtItem=By.xpath("//div[text()='15.99']");
     public double priceForBikeLight = 9.99;
     public double priceForBoltTShirt = 15.99;
-    public static By FleeceJacketItem = By.id("item_5_title_link");
-    public static By BackpackItem = By.id("item_4_title_link");
-    public static By OnesieItem = By.id("item_2_title_link");
-    public static  By TestAllTheThingsTShirtItem = By.id("item_3_title_link");
-    public static By BoltTShirtItem = By.id("item_1_title_link");
-    public static By BikerLightItem = By.id("item_0_title_link");
+    public static By fleeceJacketItem = By.id("item_5_title_link");
+    public static By backpackItem = By.id("item_4_title_link");
+    public static By onesieItem = By.id("item_2_title_link");
+    public static  By testAllTheThingsTShirtItem = By.id("item_3_title_link");
+    public static By boltTShirtItem = By.id("item_1_title_link");
+    public static By bikerLightItem = By.id("item_0_title_link");
 
 
     public CartPage(WebDriver driver){
@@ -46,6 +46,4 @@ public class CartPage {
 
         driver.findElement(checkoutButton).click();
     }
-
-
 }

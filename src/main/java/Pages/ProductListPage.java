@@ -20,9 +20,9 @@ public class ProductListPage {
     public static By addTestAllTheThingsTShirt = By.id("add-to-cart-test.allthethings()-t-shirt-(red)");
     public static By addOnesie = By.id("add-to-cart-sauce-labs-onesie");
     public static By cartIcon = By.id("shopping_cart_container");
-    public static By TwitterIcon = By.cssSelector("a[href='https://twitter.com/saucelabs']");
-    public static By FacebookIcon = By.cssSelector("a[href='https://www.facebook.com/saucelabs']");
-    public static By LinkedinIcon = By.cssSelector("a[href='https://www.linkedin.com/company/sauce-labs/']");
+    public static By twitterIcon = By.cssSelector("a[href='https://twitter.com/saucelabs']");
+    public static By facebookIcon = By.cssSelector("a[href='https://www.facebook.com/saucelabs']");
+    public static By linkedinIcon = By.cssSelector("a[href='https://www.linkedin.com/company/sauce-labs/']");
 
 
     public ProductListPage(WebDriver driver) {
@@ -65,15 +65,15 @@ public class ProductListPage {
     }
 
     public void clickOnTwitterIcon (){
-        driver.findElement(TwitterIcon).click();
+        driver.findElement(twitterIcon).click();
     }
 
     public void clickOnFacebookIcon(){
-        driver.findElement(FacebookIcon).click();
+        driver.findElement(facebookIcon).click();
     }
 
     public void clickOnLinkedinIcon(){
-        driver.findElement(LinkedinIcon).click();
+        driver.findElement(linkedinIcon).click();
     }
 
 
